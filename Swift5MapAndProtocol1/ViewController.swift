@@ -12,7 +12,7 @@ import CoreLocation
 
 class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecognizerDelegate {
     
-    
+    var addressString = ""
     @IBOutlet var longPress: UILongPressGestureRecognizer!
     
     @IBOutlet weak var settingButton: UIButton!
@@ -33,11 +33,18 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
     
     @IBAction func LongPressTap(_ sender: UILongPressGestureRecognizer) {
         
+        
+        if sender.state == .began{
         //タップを開始したとき
         
-        
+        }else if sender.state == .ended{
         //タップが終了したとき
-        
+            
+            //タップした位置を指定して、MKMapView上の緯度、軽度を取得する
+            
+            //緯度軽度から住所に変更する
+            
+        }
         
     }
     
