@@ -48,6 +48,25 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
         
     }
     
+    func convert(lat:CLLocationDegrees,log:CLLocationDegrees){
+        
+        let geocoder = CLGeocoder()
+        let location = CLLocation(latitude: lat, longitude: log)
+        
+        
+        //クロージャー
+        geocoder.reverseGeocodeLocation(location) { (placeMark, error) in
+            
+            if let placeMark = placeMark{
+                
+                if let pm = placeMark.first{
+                    
+                }
+                
+            }
+        }
+    }
+    
 
 }
 
