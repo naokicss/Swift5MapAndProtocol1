@@ -79,6 +79,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
                         self.addressString = pm.name!
                         
                     }
+               
                     
                     self.addressLabel.text = self.addressString
                 }
