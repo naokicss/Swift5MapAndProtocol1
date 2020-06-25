@@ -39,10 +39,12 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
         
         }else if sender.state == .ended{
         //タップが終了したとき
+    //タップした位置を指定して、MKMapView上の緯度、軽度を取得する
+        //緯度軽度から住所に変更する
             
-            //タップした位置を指定して、MKMapView上の緯度、軽度を取得する
+            let tapPoint = sender.location(in: UIView?)
             
-            //緯度軽度から住所に変更する
+            
             
         }
         
@@ -64,8 +66,13 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
                     if pm.administrativeArea != nil || pm.location != nil {
                         
                         self.addressString = pm.name! + pm.administrativeArea! + pm.locality!
+                    }else{
+                        
+                        self.addressString = pm.name!
+                        
                     }
                     
+                    self.addressLabel.text = self.addressString
                 }
                 
             }
