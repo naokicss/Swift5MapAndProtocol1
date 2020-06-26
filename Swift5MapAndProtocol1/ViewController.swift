@@ -10,7 +10,8 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecognizerDelegate {
+class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecognizerDelegate,SearchLocationDelegate {
+    
     
     var addressString = ""
     @IBOutlet var longPress: UILongPressGestureRecognizer!
@@ -103,13 +104,26 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
         if segue.identifier == "next"{
             
             let nextVC = segue.destination as! NextViewController
-            
+            nextVC.delegate = self
             //
             
         }
         
         
     }
+    //任されたデリゲートメソッド
+    func searchLocation(idoValue: String, keidoValue: String) {
+        
+        if idoValue.isEmpty != true && keidoValue.isEmpty != true{
+            
+            
+            let idoString = idoValue
+            let keidoString = keidoValue
+            
+        }
+        
+        
+       }
     
     
 }

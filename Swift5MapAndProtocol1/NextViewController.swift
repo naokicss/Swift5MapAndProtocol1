@@ -40,13 +40,12 @@ class NextViewController: UIViewController {
     let idoValue = idoTextField.text!
     let keidoValue = keidoTextField.text!
     
-        //デリゲートメソッドの引数に入れる
-        
-        delegate?.searchLocation(idoValue: idoValue, keidoValue: keidoValue)
-    
     //両方のTFが空でなければ戻る
         
         if idoTextField.text != nil && keidoTextField.text != nil{
+            
+            //デリゲートメソッドの引数に入れる
+                   delegate?.searchLocation(idoValue: idoValue, keidoValue: keidoValue)
             
             dismiss(animated: true, completion: nil)
             
