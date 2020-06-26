@@ -35,6 +35,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="設定"/>
+                                <connections>
+                                    <action selector="goToSearchVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xzj-zU-sL3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -100,6 +103,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="448-wd-fzl"/>
                     </view>
+                    <connections>
+                        <outlet property="idoTextField" destination="6qF-hS-pp0" id="Nmy-ne-KsD"/>
+                        <outlet property="keidoTextField" destination="iZG-sc-hpC" id="OUB-49-moE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qC2-20-a2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
