@@ -8,6 +8,12 @@
 
 import UIKit
 
+
+protocol SearchLocationDelegate {
+    func searchLocation(idoValue:String,keidoValue:String)
+}
+
+
 class NextViewController: UIViewController {
 
     
@@ -16,6 +22,8 @@ class NextViewController: UIViewController {
     @IBOutlet weak var keidoTextField: UITextField!
     
     
+    var delegate:SearchLocationDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,14 +31,14 @@ class NextViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func okAction(_ sender: Any) {
     }
-    */
+
+    
+    //入力された値を取得
+    
+    //デリゲートメソッドの引数に入れる
+    
+    //両方のTFが空でなければ戻る
 
 }
