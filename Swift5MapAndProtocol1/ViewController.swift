@@ -76,7 +76,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
                 
                 if let pm = placeMark.first{
                     
-                    if pm.administrativeArea != nil || pm.location != nil {
+                    if pm.administrativeArea != nil || pm.locality != nil {
                         
                         self.addressString = pm.name! + pm.administrativeArea! + pm.locality!
                     }else{
