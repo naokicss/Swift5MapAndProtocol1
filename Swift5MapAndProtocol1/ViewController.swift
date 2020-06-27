@@ -65,6 +65,10 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
         let location = CLLocation(latitude: lat, longitude: log)
         
         
+        
+        //オプショナルバインディング if 変数　!= nil{}  if let 変数　変数1{ print(変数)}*/
+        
+        
         //クロージャー
         geocoder.reverseGeocodeLocation(location) { (placeMark, error) in
             
