@@ -137,7 +137,15 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
             
             //緯度経度から住所に変換
             
+            convert(lat:Double(idoString)! , log: Double(keidoString)!)
+            
             //ラベルに表示
+                 addressLabel.text = addressString
+            
+        }else{
+            
+            addressLabel.text = "表示できません"
+            
         }
         
         
