@@ -120,6 +120,24 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
             let idoString = idoValue
             let keidoString = keidoValue
             
+            //緯度経度からコーディネート
+            let coordinate = CLLocationCoordinate2DMake(Double(idoString)!, Double(keidoString)!)
+            
+            
+            //表示する範囲を指定します
+            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+            
+            //領域を指定
+            
+            let region = MKCoordinateRegion(center: coordinate, span: span )
+            
+            //領域をmapviewに設定
+            
+            mapVIew.setRegion(region, animated: true)
+            
+            //緯度経度から住所に変換
+            
+            //ラベルに表示
         }
         
         
