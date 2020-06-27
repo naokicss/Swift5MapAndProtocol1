@@ -68,7 +68,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
         
         //オプショナルバインディング if 変数　!= nil{}  if let 変数　変数1{ print(変数)}*/
         
-        
+         
         //クロージャー
         geocoder.reverseGeocodeLocation(location) { (placeMark, error) in
             
@@ -88,11 +88,11 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
                     
                     self.addressLabel.text = self.addressString
                 }
-                
+                 print(placeMark)
             }
         }
     }
-    
+   
     
     @IBAction func goToSearchVC(_ sender: Any) {
         
@@ -125,7 +125,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
             let keidoString = keidoValue
             
             //緯度経度からコーディネート
-            let coordinate = CLLocationCoordinate2DMake(Double(idoString)!, Double(keidoString)!)
+            let coordinate = CLLocationCoordinate2DMake(Double(idoString)!,  Double(keidoString)!)
             
             
             //表示する範囲を指定します
@@ -133,7 +133,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
             
             //領域を指定
             
-            let region = MKCoordinateRegion(center: coordinate, span: span )
+            let region = MKCoordinateRegion(center:coordinate, span: span )
             
             //領域をmapviewに設定
             
